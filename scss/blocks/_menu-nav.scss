@@ -1,0 +1,173 @@
+.menu-nav {
+    position: fixed;
+    height: calc(100vh - 80px);
+    width: 100%;
+    top: 80px;
+    left: 0;
+    background-color: $color-blue-charcoa;
+    overflow: hidden;
+    overflow-y: auto;
+    padding: 0 90px;
+
+    @include vp-1023 {
+        height: calc(100vh - 58px);
+        top: 58px;
+        padding: 0 74px;
+    }
+
+    @include vp-767 {
+        padding: 0 20px;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        padding: 180px 0 0 0;
+        max-width: 1230px;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+
+        @media (max-width: 1240px) {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+        }
+
+        @include vp-1023 {
+            grid-template-columns: repeat(2, 280px);
+            padding: 80px 0 0 0;
+            grid-auto-rows: min-content;
+            gap: 120px 20px;
+        }
+
+        @include vp-767 {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__list--center {
+        @include vp-1023 {
+            grid-row: 2;
+        }
+    }
+
+    &__list--right {
+        @include vp-1023 {
+            grid-row: span 2;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        gap: 40px;
+
+        @include vp-1023 {
+            gap: 35px;
+        }
+    }
+
+    &__item {
+        .menu-nav__link {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 26px;
+            color: $color-white-50;
+
+            @include vp-1023 {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    &__item {
+        .menu-nav__link--uppercase {
+            margin: 0;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: 0.02em;
+            color: $color-white-50;
+
+            @include vp-1023 {
+                font-size: 20px;
+                line-height: 24px;
+            }
+
+            @include vp-767 {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    &__title {
+        margin: 0;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        color: $color-white-50;
+
+        @include vp-1023 {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        @include vp-767 {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+    &__btn {
+        display: none;
+
+        @include vp-767 {
+            display: block;
+        }
+    }
+
+    // соцсети
+    &__socials {
+        display: flex;
+        flex-direction: column;
+        gap: 56px;
+        list-style: none;
+
+        position: absolute;
+        top: 100px;
+        right: 50px;
+
+        @include vp-1023 {
+            right: 20px;
+            top: 87px;
+            gap: 46px;
+        }
+
+        @include vp-767 {
+            top: 81px;
+            gap: 47px;
+        }
+    }
+
+    &__social-link {
+        &:hover,
+        &:focus-visible {
+            color: $color-ecru-white;
+            outline: none;
+
+            .menu-nav__icon {
+                color: $color-ecru-white;
+            }
+        }
+    }
+
+    &__icon {
+        color: $color-dark-slate;
+    }
+}
