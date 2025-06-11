@@ -1,0 +1,46 @@
+.project-filters {
+    &__wrapper {
+        padding: 40px 0 20px 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 0 0 40px 0;
+        gap: 10px;
+    }
+
+    &__link {
+        display: flex;
+    }
+
+    &__view-controls {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__view-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        color: $color-mischka;
+
+        &--active {
+            color: $color-blue-charcoa;
+        }
+
+        &:hover,
+        &:focus-visible {
+            text-decoration: underline;
+            outline: none;
+        }
+    }
+
+    &__view-text {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}

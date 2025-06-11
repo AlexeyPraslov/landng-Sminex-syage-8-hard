@@ -1,0 +1,16 @@
+.btn {
+    padding: 8px 16px;
+    color: $color-blue-charcoa;
+    background-color: $color-ecru-white;
+    border-radius: 60px;
+
+    font-size: 14px;
+    line-height: 20px;
+
+    width: fit-content;
+
+    &--active {
+        background-color: $color-blue-charcoa;
+        color: $color-ecru-white;
+    }
+}
