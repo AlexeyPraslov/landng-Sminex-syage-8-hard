@@ -1,6 +1,13 @@
 .project-filters {
     &__wrapper {
         padding: 40px 0 20px 0;
+
+        @include vp-767 {
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
     &__list {
@@ -10,15 +17,38 @@
         padding: 0;
         margin: 0 0 40px 0;
         gap: 10px;
+
+        @include vp-767 {
+            margin: 0;
+        }
+    }
+
+    &__item {
+        @include vp-767 {
+            display: none;
+        }
+        &--mobile {
+            display: none;
+            @include vp-767 {
+                display: flex;
+            }
+        }
     }
 
     &__link {
         display: flex;
+
+        font-size: 14px;
+        line-height: 20px;
     }
 
     &__view-controls {
         display: flex;
         gap: 30px;
+
+        @include vp-767 {
+            gap: 20px;
+        }
     }
 
     &__view-box {
@@ -42,5 +72,15 @@
     &__view-text {
         font-size: 18px;
         line-height: 26px;
+
+        @include vp-767 {
+            display: none;
+        }
+    }
+
+    &__menu-icon {
+        @include vp-767 {
+            width: 20px;
+        }
     }
 }
