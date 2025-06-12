@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Global */
 /* ------------------------------------ */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -929,8 +930,10 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-height: 380px;
+  height: 100%;
   border-top: 1px #cbcccc solid;
-  padding: 60px 28px;
+  padding: 60px 28px 58px 28px;
   width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -960,11 +963,37 @@ a {
           flex-direction: column;
 }
 .news__description {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
   max-width: 400px;
   width: 100%;
 }
+.news__description-inner {
+  height: 260px;
+}
+.news__description-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.news__description-item {
+  position: relative;
+  text-indent: 12px; /* Отодвигаем текст только для первой строки */
+}
+.news__description-item::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 1px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #1d252d;
+}
 .news__img {
-  height: 240px;
+  height: 220px;
   -o-object-fit: cover;
      object-fit: cover;
   -ms-flex-item-align: start;
@@ -984,10 +1013,4 @@ a {
   line-height: 20px;
   color: #a7a8aa;
   margin: 0 0 20px 0;
-}
-.news__description {
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 26px;
-  margin: 0;
 }/*# sourceMappingURL=style.css.map */

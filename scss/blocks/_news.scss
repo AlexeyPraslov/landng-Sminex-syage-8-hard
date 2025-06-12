@@ -10,8 +10,11 @@
     &__item {
         display: flex;
 
+        min-height: 380px;
+        height: 100%;
+
         border-top: 1px $color-iron solid;
-        padding: 60px 28px;
+        padding: 60px 28px 58px 28px;
         width: 100%;
         justify-content: space-between;
         gap: 20px;
@@ -34,12 +37,44 @@
     }
 
     &__description {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 26px;
+
+        margin: 0;
+
         max-width: 400px;
         width: 100%;
     }
 
+    &__description-inner {
+        height: 260px;
+    }
+
+    &__description-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__description-item {
+        position: relative;
+        text-indent: 12px; /* Отодвигаем текст только для первой строки */
+    }
+
+    &__description-item::after {
+        content: "";
+        position: absolute;
+        top: 11px;
+        left: 1px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $color-blue-charcoa;
+    }
+
     &__img {
-        height: 240px;
+        height: 220px;
         object-fit: cover;
         align-self: start;
     }
@@ -59,13 +94,5 @@
         line-height: 20px;
         color: $color-mischka;
         margin: 0 0 20px 0;
-    }
-
-    &__description {
-        font-weight: 300;
-        font-size: 18px;
-        line-height: 26px;
-
-        margin: 0;
     }
 }
