@@ -18,4 +18,11 @@
         background-color: $color-blue-charcoa;
         color: $color-ecru-white;
     }
+
+    &:hover,
+    &:focus-visible {
+        background-color: $color-chrome-white;
+        color: $color-blue-charcoa;
+        outline: none;
+    }
 }

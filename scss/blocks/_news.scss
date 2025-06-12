@@ -22,17 +22,43 @@
     }
 
     &__item {
-        display: flex;
+        &--tile {
+            flex-direction: column;
+            border-top: none;
+
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            overflow: hidden;
+            max-width: 674px;
+            width: 100%;
+            height: 360px;
+
+            padding: 40px;
+
+            @include vp-1023 {
+                padding: 20px;
+            }
+
+            @include vp-767 {
+                max-height: 200px;
+            }
+        }
+    }
+
+    &__card {
         min-height: 380px;
         height: 100%;
-        border-top: 1px $color-iron solid;
         padding: 60px 28px 58px 28px;
         width: 100%;
         justify-content: space-between;
         gap: 20px;
+        display: flex;
+        border-top: 1px $color-iron solid;
 
         @media (max-width: 1230px) {
-            padding: 60px 0 58px 0;
+            padding: 60px 0 60px 0;
         }
 
         @include vp-1023 {
@@ -46,30 +72,10 @@
             gap: 10px;
         }
 
-        &--tile {
-            flex-direction: column;
-            border-top: none;
-
-            position: relative;
-            display: flex;
-            flex-direction: column;
-
-            color: white;
-
-            overflow: hidden;
-            max-width: 674px;
-            width: 100%;
-            height: auto;
-
-            padding: 40px;
-
-            @include vp-1023 {
-                padding: 20px;
-            }
-
-            @include vp-767 {
-                min-height: 200px;
-            }
+        &:hover,
+        &:focus-visible {
+            background-color: $color-twilight-blue;
+            outline: none;
         }
     }
 
@@ -159,7 +165,7 @@
 
     &__description-item {
         position: relative;
-        text-indent: 12px; /* Отодвигаем текст только для первой строки */
+        text-indent: 10px; /* Отодвигаем текст только для первой строки */
 
         @include vp-767 {
             text-indent: 7px;
@@ -228,6 +234,7 @@
 
         &--tile {
             margin: 0;
+            color: $color-white;
 
             @include vp-767 {
                 font-weight: 300;
@@ -255,6 +262,7 @@
 
         &--tile {
             color: $color-white;
+            margin: 0;
         }
     }
 
@@ -273,5 +281,6 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+        margin-top: auto;
     }
 }

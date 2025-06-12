@@ -56,6 +56,11 @@
     }
 
     &__view-box {
+        border: none;
+        background: none;
+        padding: 0;
+        margin: 0;
+
         display: flex;
         align-items: center;
         gap: 10px;
@@ -70,6 +75,7 @@
         &:focus-visible {
             text-decoration: underline;
             outline: none;
+            color: $color-blue-charcoa;
         }
     }
 
