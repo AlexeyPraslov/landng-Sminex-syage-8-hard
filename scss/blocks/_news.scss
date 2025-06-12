@@ -5,6 +5,20 @@
         flex-direction: column;
         margin: 0;
         padding: 0;
+
+        &--tile {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 40px 0;
+
+            @include vp-767 {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                justify-items: center;
+                padding: 30px 0;
+            }
+        }
     }
 
     &__item {
@@ -30,6 +44,32 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+        }
+
+        &--tile {
+            flex-direction: column;
+            border-top: none;
+
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            color: white;
+
+            overflow: hidden;
+            max-width: 674px;
+            width: 100%;
+            height: auto;
+
+            padding: 40px;
+
+            @include vp-1023 {
+                padding: 20px;
+            }
+
+            @include vp-767 {
+                min-height: 200px;
+            }
         }
     }
 
@@ -155,6 +195,15 @@
             width: 100%;
             border-radius: 0;
         }
+
+        &--tile {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
     }
 
     &__title {
@@ -176,6 +225,16 @@
             font-size: 20px;
             line-height: 24px;
         }
+
+        &--tile {
+            margin: 0;
+
+            @include vp-767 {
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
     }
 
     &__date {
@@ -193,5 +252,26 @@
             font-size: 12px;
             line-height: 16px;
         }
+
+        &--tile {
+            color: $color-white;
+        }
+    }
+
+    &__link--tile {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+
+        @include vp-1023 {
+            top: 20px;
+            left: 20px;
+        }
+    }
+
+    &__title-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 }

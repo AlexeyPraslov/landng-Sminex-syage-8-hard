@@ -8,6 +8,10 @@
             justify-content: space-between;
             align-items: center;
         }
+
+        &--tile {
+            border-bottom: 1px $color-iron solid;
+        }
     }
 
     &__list {
