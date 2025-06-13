@@ -5,9 +5,148 @@
         flex-direction: column;
         margin: 0;
         padding: 0;
+
+        &--grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            border-top: 1px $color-iron solid;
+            padding: 40px 0;
+
+            @include vp-767 {
+                grid-template-columns: 1fr;
+                padding: 30px 0;
+                gap: 15px;
+            }
+
+            .news__item .news__description-inner {
+                display: none;
+            }
+
+            .news__item .news__description {
+                display: none;
+            }
+
+            .news__item .news__image-box--flex {
+                display: none;
+            }
+
+            .news__item .news__image-box--grid {
+                display: flex;
+            }
+
+            .news__link {
+                position: absolute;
+                z-index: 2;
+                top: 0px;
+                left: 0px;
+            }
+
+            .news__card {
+                position: relative; // для позиционирования потомков
+                display: flex;
+                flex-direction: column;
+                min-height: 360px;
+                height: 100%;
+
+                padding: 40px;
+                width: 100%;
+                justify-content: space-between;
+                gap: 20px;
+
+                @include vp-1023 {
+                    padding: 20px;
+                }
+
+                @include vp-767 {
+                    min-height: 200px;
+                    height: 100%;
+                }
+            }
+
+            .news__image-box--grid {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                pointer-events: none;
+
+                .news__img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+
+                    @include vp-1023 {
+                        border-radius: 0;
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(
+                        180deg,
+                        rgba(0, 0, 0, 0) 0%,
+                        rgba(0, 0, 0, 0.5) 100%
+                    );
+                    z-index: 1;
+                    pointer-events: none;
+                }
+            }
+
+            .news__text-inner {
+                position: relative;
+                z-index: 2; // выше всего
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            .news__center-inner {
+                display: flex;
+                flex-direction: column-reverse;
+                margin-top: auto;
+                min-width: 100%;
+
+                @include vp-767 {
+                    margin-top: auto;
+                }
+            }
+
+            .news__title {
+                color: $color-white;
+                margin: 0;
+                min-width: 100%;
+
+                @include vp-767 {
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: 0.02em;
+                }
+            }
+
+            .news__date {
+                margin: 0 0 10px 0;
+                color: $color-white;
+            }
+
+            .news__date-inner {
+                margin: 0;
+                align-items: flex-end;
+            }
+        }
     }
 
-    &__item {
+    &__card {
         display: flex;
         min-height: 380px;
         height: 100%;
@@ -31,6 +170,10 @@
             flex-direction: column;
             gap: 10px;
         }
+    }
+
+    &__image-box--grid {
+        display: none;
     }
 
     &__text-inner {

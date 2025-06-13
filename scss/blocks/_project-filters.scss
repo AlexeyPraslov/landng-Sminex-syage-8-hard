@@ -58,6 +58,11 @@
         cursor: pointer;
         color: $color-mischka;
 
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+
         &--active {
             color: $color-blue-charcoa;
         }

@@ -237,19 +237,19 @@
           </ul>
 
           <div class="project-filters__view-controls">
-            <a class="project-filters__view-box  project-filters__view-box--active">
+            <button class="project-filters__view-box project-filters__view-box--active" type="button">
               <svg class="project-filters__menu-icon" width="24" height="14" aria-hidden="true">
                 <use xlink:href="images/sprite.svg#icon-burger"></use>
               </svg>
               <span class="project-filters__view-text">Списком</span>
-            </a>
+            </button>
 
-            <a class="project-filters__view-box">
+            <button class="project-filters__view-box" type="button">
               <svg class="project-filters__menu-icon" width="24" height="24" aria-hidden="true">
                 <use xlink:href="images/sprite.svg#icon-tile"></use>
               </svg>
               <span class="project-filters__view-text">Плиткой</span>
-            </a>
+            </button>
           </div>
 
         </div>
@@ -261,258 +261,351 @@
 
       <h2 class="visually-hidden">Новости проекта</h2>
       <div class="container">
-        <ul class="news__list">
+        <ul class="news__list news__list--grid">
 
           <li class="news__item">
-            <picture class="news__image-box">
-              <source media="(max-width: 767px)"
-                srcset="images/news/img-1-list-mobile.jpg 1x, images/news/img-1-list-mobile@2x.jpg 2x">
 
-              <source media="(max-width: 1023px)"
-                srcset="images/news/img-1-list-tablet.jpg 1x, images/news/img-1-list-tablet@2x.jpg 2x">
+            <article class="news__card">
 
-              <img class="news__img" src="images/news/img-1-list.jpg" srcset="images/news/img-1-list@2x.jpg 2x"
-                width="340" height="220" alt="фасад здания">
-            </picture>
+              <!-- карточки для флексов -->
+              <picture class="news__image-box news__image-box--flex">
+                <source media="(max-width: 767px)"
+                  srcset="images/news/img-1-list-mobile.jpg 1x, images/news/img-1-list-mobile@2x.jpg 2x">
 
-            <div class="news__text-inner">
+                <source media="(max-width: 1023px)"
+                  srcset="images/news/img-1-list-tablet.jpg 1x, images/news/img-1-list-tablet@2x.jpg 2x">
 
-              <div class="news__center-inner">
-                <h3 class="news__title">Sminex приступил к фасадным работам в&nbsp;клубном доме &laquo;Чистые
-                  Пруды&raquo;</h3>
+                <img class="news__img" src="images/news/img-1-list.jpg" srcset="images/news/img-1-list@2x.jpg 2x"
+                  width="340" height="220" alt="фасад здания">
+              </picture>
 
-                <div class="news__date-inner">
+              <!-- карточки для гридов -->
+              <picture class="news__image-box news__image-box--grid">
+                <source media="(max-width: 767px)"
+                  srcset="images/news/img-1-grid-mobile.jpg 1x, images/news/img-1-grid-mobile@2x.jpg 2x">
 
-                  <span class="news__date">12&nbsp;апреля 2024</span>
+                <source media="(max-width: 1023px)"
+                  srcset="images/news/img-1-grid-tablet.jpg 1x, images/news/img-1-grid-tablet@2x.jpg 2x">
 
-                  <a class="news__link btn" href="#">Чистые пруды</a>
+                <img class="news__img" src="images/news/img-1-grid.jpg" srcset="images/news/img-1-grid@2x.jpg 2x"
+                  width="340" height="220" alt="фасад здания">
+              </picture>
 
+              <div class="news__text-inner">
+
+                <div class="news__center-inner">
+                  <h3 class="news__title">Sminex приступил к фасадным работам в&nbsp;клубном доме &laquo;Чистые
+                    Пруды&raquo;</h3>
+
+                  <div class="news__date-inner">
+
+                    <span class="news__date">12&nbsp;апреля 2024</span>
+
+                    <a class="news__link btn" href="#">Чистые пруды</a>
+
+                  </div>
                 </div>
-              </div>
 
-              <p class="news__description">Девелопер реставрирует кирпичную кладку наружных стен здания, построенного в
-                1915 году по&nbsp;проекту архитектора Отто фон Дессина. Завершить фасадные работы планируется
-                в&nbsp;декабре этого
-                года. Клубный дом &laquo;Чистые Пруды&raquo; расположен в&nbsp;глубине тихого Потаповского переулка,
-                в&nbsp;50&nbsp;метрах от
-                знаменитого одноимённого пруда. Sminex проводит бережную реконструкцию здания, чтобы сохранить его
-                изысканную ...</p>
-            </div>
+                <p class="news__description">Девелопер реставрирует кирпичную кладку наружных стен здания, построенного
+                  в
+                  1915 году по&nbsp;проекту архитектора Отто фон Дессина. Завершить фасадные работы планируется
+                  в&nbsp;декабре этого
+                  года. Клубный дом &laquo;Чистые Пруды&raquo; расположен в&nbsp;глубине тихого Потаповского переулка,
+                  в&nbsp;50&nbsp;метрах от
+                  знаменитого одноимённого пруда. Sminex проводит бережную реконструкцию здания, чтобы сохранить его
+                  изысканную ...</p>
+              </div>
+            </article>
           </li>
 
           <li class="news__item">
-            <picture class="news__image-box">
-              <source media="(max-width: 767px)"
-                srcset="images/news/img-2-list-mobile.jpg 1x, images/news/img-2-list-mobile@2x.jpg 2x">
+            <article class="news__card">
 
-              <source media="(max-width: 1023px)"
-                srcset="images/news/img-2-list-tablet.jpg 1x, images/news/img-2-list-tablet@2x.jpg 2x">
+              <picture class="news__image-box news__image-box--flex">
+                <source media="(max-width: 767px)"
+                  srcset="images/news/img-2-list-mobile.jpg 1x, images/news/img-2-list-mobile@2x.jpg 2x">
 
-              <img class="news__img" src="images/news/img-2-list.jpg" srcset="images/news/img-2-list@2x.jpg 2x"
-                width="340" height="220" alt="фасад здания">
-            </picture>
+                <source media="(max-width: 1023px)"
+                  srcset="images/news/img-2-list-tablet.jpg 1x, images/news/img-2-list-tablet@2x.jpg 2x">
 
-            <div class="news__text-inner">
+                <img class="news__img" src="images/news/img-2-list.jpg" srcset="images/news/img-2-list@2x.jpg 2x"
+                  width="340" height="220" alt="фасад здания">
+              </picture>
 
-              <div class="news__center-inner">
-                <h3 class="news__title">&laquo;Дзен&raquo;. Главные места и&nbsp;секреты Чистых прудов</h3>
-                <div class="news__date-inner">
-                  <span class="news__date">8&nbsp;апреля 2024</span>
+              <picture class="news__image-box news__image-box--grid">
+                <source media="(max-width: 767px)"
+                  srcset="images/news/img-2-grid-mobile.jpg 1x, images/news/img-2-grid-mobile@2x.jpg 2x">
 
-                  <a class="news__link btn" href="#">Чистые пруды</a>
+                <source media="(max-width: 1023px)"
+                  srcset="images/news/img-2-grid-tablet.jpg 1x, images/news/img-2-grid-tablet@2x.jpg 2x">
+
+                <img class="news__img" src="images/news/img-2-grid.jpg" srcset="images/news/img-2-grid@2x.jpg 2x"
+                  width="340" height="220" alt="фасад здания">
+              </picture>
+
+
+              <div class="news__text-inner">
+
+                <div class="news__center-inner">
+                  <h3 class="news__title">&laquo;Дзен&raquo;. Главные места и&nbsp;секреты Чистых прудов</h3>
+                  <div class="news__date-inner">
+                    <span class="news__date">8&nbsp;апреля 2024</span>
+
+                    <a class="news__link btn" href="#">Чистые пруды</a>
+                  </div>
                 </div>
+
+
+                <div class="news__description-inner">
+                  <p class="news__description">Чистые пруды хранят дух исконной Москвы и при этом обладают всеми
+                    преимуществами мегаполиса. Здесь есть свои тайны, знаковые места и современные пентхаусы.</p>
+                  <ul class="news__description-list">
+
+                    <li class="news__description-item">
+                      <p class="news__description">Как Чистые пруды стали чистыми и при чём тут британцы?</p>
+                    </li>
+
+                    <li class="news__description-item">
+                      <p class="news__description">Что Булгаков переместил с Чистых прудов на Патриаршие в романе
+                        «Мастер
+                        и Маргарита»?</p>
+                    </li>
+
+                    <li class="news__description-item">
+                      <p class="news__description">Как доходный дом начала ХХ века получил новое содержание и стал
+                        клубным?...</p>
+                    </li>
+
+
+                  </ul>
+                </div>
+
               </div>
-
-
-              <div class="news__description-inner">
-                <p class="news__description">Чистые пруды хранят дух исконной Москвы и при этом обладают всеми
-                  преимуществами мегаполиса. Здесь есть свои тайны, знаковые места и современные пентхаусы.</p>
-                <ul class="news__description-list">
-
-                  <li class="news__description-item">
-                    <p class="news__description">Как Чистые пруды стали чистыми и при чём тут британцы?</p>
-                  </li>
-
-                  <li class="news__description-item">
-                    <p class="news__description">Что Булгаков переместил с Чистых прудов на Патриаршие в романе «Мастер
-                      и Маргарита»?</p>
-                  </li>
-
-                  <li class="news__description-item">
-                    <p class="news__description">Как доходный дом начала ХХ века получил новое содержание и стал
-                      клубным?...</p>
-                  </li>
-
-
-                </ul>
-              </div>
-
-            </div>
+            </article>
           </li>
 
           <li class="news__item">
-            <picture class="news__image-box">
-              <source media="(max-width: 767px)"
-                srcset="images/news/img-3-list-mobile.jpg 1x, images/news/img-3-list-mobile@2x.jpg 2x">
+            <article class="news__card">
 
-              <source media="(max-width: 1023px)"
-                srcset="images/news/img-3-list-tablet.jpg 1x, images/news/img-3-list-tablet@2x.jpg 2x">
+              <picture class="news__image-box news__image-box--flex">
+                <source media="(max-width: 767px)"
+                  srcset="images/news/img-3-list-mobile.jpg 1x, images/news/img-3-list-mobile@2x.jpg 2x">
 
-              <img class="news__img" src="images/news/img-3-list.jpg" srcset="images/news/img-3-list@2x.jpg 2x"
-                width="340" height="220" alt="фасад здания">
-            </picture>
+                <source media="(max-width: 1023px)"
+                  srcset="images/news/img-3-list-tablet.jpg 1x, images/news/img-3-list-tablet@2x.jpg 2x">
 
-            <div class="news__text-inner">
+                <img class="news__img" src="images/news/img-3-list.jpg" srcset="images/news/img-3-list@2x.jpg 2x"
+                  width="340" height="220" alt="фасад здания">
+              </picture>
 
-              <div class="news__center-inner">
-                <h3 class="news__title">Высокий спрос привёл к&nbsp;росту цен на&nbsp;элитную недвижимость Остоженки
-                </h3>
+              <!-- карточки для гридов -->
+              <picture class="news__image-box news__image-box--grid">
+                <source media="(max-width: 767px)"
+                  srcset="images/news/img-3-grid-mobile.jpg 1x, images/news/img-3-grid-mobile@2x.jpg 2x">
+
+                <source media="(max-width: 1023px)"
+                  srcset="images/news/img-3-grid-tablet.jpg 1x, images/news/img-3-grid-tablet@2x.jpg 2x">
+
+                <img class="news__img" src="images/news/img-3-grid.jpg" srcset="images/news/img-3-grid@2x.jpg 2x"
+                  width="340" height="220" alt="фасад здания">
+              </picture>
+
+              <div class="news__text-inner">
+
+                <div class="news__center-inner">
+                  <h3 class="news__title">Высокий спрос привёл к&nbsp;росту цен на&nbsp;элитную недвижимость Остоженки
+                  </h3>
 
 
-                <div class="news__date-inner">
-                  <span class="news__date">4&nbsp;апреля 2024</span>
+                  <div class="news__date-inner">
+                    <span class="news__date">4&nbsp;апреля 2024</span>
 
 
+                  </div>
                 </div>
-              </div>
 
-              <p class="news__description">В&nbsp;2023 году объем предложения элитных квартир в&nbsp;районе Остоженки
-                составил
-                29,9&nbsp;тыс.&nbsp;кв.&nbsp;м, а&nbsp;к&nbsp;концу&nbsp;I квартала 2024-го он&nbsp;уменьшился
-                до&nbsp;26,8&nbsp;кв.&nbsp;м. Сейчас здесь продаются четыре
-                строящихся дома. На&nbsp;фоне уменьшения предложения средняя стоимость&nbsp;кв.&nbsp;м&nbsp;в&nbsp;них
-                за&nbsp;прошедший год
-                увеличилась на&nbsp;23%&nbsp;&mdash; с&nbsp;2,5 до&nbsp;3,1 млн рублей. Самые дорогие лоты&nbsp;&mdash;
-                пентхаусы&nbsp;&mdash; выросли в&nbsp;цене на&nbsp;16%, с
-                4,3 до&nbsp;5&nbsp;млн рублей ...</p>
-            </div>
+                <p class="news__description">В&nbsp;2023 году объем предложения элитных квартир в&nbsp;районе Остоженки
+                  составил
+                  29,9&nbsp;тыс.&nbsp;кв.&nbsp;м, а&nbsp;к&nbsp;концу&nbsp;I квартала 2024-го он&nbsp;уменьшился
+                  до&nbsp;26,8&nbsp;кв.&nbsp;м. Сейчас здесь продаются четыре
+                  строящихся дома. На&nbsp;фоне уменьшения предложения средняя стоимость&nbsp;кв.&nbsp;м&nbsp;в&nbsp;них
+                  за&nbsp;прошедший год
+                  увеличилась на&nbsp;23%&nbsp;&mdash; с&nbsp;2,5 до&nbsp;3,1 млн рублей. Самые дорогие
+                  лоты&nbsp;&mdash;
+                  пентхаусы&nbsp;&mdash; выросли в&nbsp;цене на&nbsp;16%, с
+                  4,3 до&nbsp;5&nbsp;млн рублей ...</p>
+              </div>
+            </article>
           </li>
 
           <li class="news__item">
-            <picture class="news__image-box">
-              <source media="(max-width: 767px)"
-                srcset="images/news/img-4-list-mobile.jpg 1x, images/news/img-4-list-mobile@2x.jpg 2x">
+            <article class="news__card">
+              <picture class="news__image-box news__image-box--flex">
+                <source media="(max-width: 767px)"
+                  srcset="images/news/img-4-list-mobile.jpg 1x, images/news/img-4-list-mobile@2x.jpg 2x">
 
-              <source media="(max-width: 1023px)"
-                srcset="images/news/img-4-list-tablet.jpg 1x, images/news/img-4-list-tablet@2x.jpg 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="images/news/img-4-list-tablet.jpg 1x, images/news/img-4-list-tablet@2x.jpg 2x">
 
-              <img class="news__img" src="images/news/img-4-list.jpg" srcset="images/news/img-4-list@2x.jpg 2x"
-                width="340" height="220" alt="фасад здания">
-            </picture>
+                <img class="news__img" src="images/news/img-4-list.jpg" srcset="images/news/img-4-list@2x.jpg 2x"
+                  width="340" height="220" alt="фасад здания">
+              </picture>
 
-            <div class="news__text-inner">
+              <!-- карточки для гридов -->
+              <picture class="news__image-box news__image-box--grid">
+                <source media="(max-width: 767px)"
+                  srcset="images/news/img-4-grid-mobile.jpg 1x, images/news/img-4-grid-mobile@2x.jpg 2x">
 
-              <div class="news__center-inner">
-                <h3 class="news__title">Sminex создаёт самый близкий к&nbsp;Кремлю всесезонный двор-сад</h3>
+                <source media="(max-width: 1023px)"
+                  srcset="images/news/img-4-grid-tablet.jpg 1x, images/news/img-4-grid-tablet@2x.jpg 2x">
 
-                <div class="news__date-inner">
-                  <span class="news__date">4&nbsp;апреля 2024</span>
+                <img class="news__img" src="images/news/img-4-grid.jpg" srcset="images/news/img-4-grid@2x.jpg 2x"
+                  width="340" height="220" alt="фасад здания">
+              </picture>
 
-                  <a class="news__link btn" href="#">Ильинка 3/8</a>
+              <div class="news__text-inner">
+
+                <div class="news__center-inner">
+                  <h3 class="news__title">Sminex создаёт самый близкий к&nbsp;Кремлю всесезонный двор-сад</h3>
+
+                  <div class="news__date-inner">
+                    <span class="news__date">4&nbsp;апреля 2024</span>
+
+                    <a class="news__link btn" href="#">Ильинка 3/8</a>
+                  </div>
                 </div>
-              </div>
 
-              <p class="news__description">В&nbsp;коллекции клубных особняков &laquo;Ильинка 3/8&raquo; благоустройство
-                занимает 1700&nbsp;кв.
-                м. Девелопер представил концепцию двора-сада, в&nbsp;которой гармонично соединяет исторические детали
-                XIX
-                века и&nbsp;современные технологии комфорта. В&nbsp;приватном пространстве жители наслаждаются цветущим
-                круглый
-                год садом&nbsp;&mdash; всего в&nbsp;ботанической коллекции больше&nbsp;6600
-                растений.&nbsp;Территория&nbsp;клубных&nbsp;особняков в 160
-                метрах от&nbsp;Красной площади начинается...</p>
-            </div>
+                <p class="news__description">В&nbsp;коллекции клубных особняков &laquo;Ильинка 3/8&raquo;
+                  благоустройство
+                  занимает 1700&nbsp;кв.
+                  м. Девелопер представил концепцию двора-сада, в&nbsp;которой гармонично соединяет исторические детали
+                  XIX
+                  века и&nbsp;современные технологии комфорта. В&nbsp;приватном пространстве жители наслаждаются
+                  цветущим
+                  круглый
+                  год садом&nbsp;&mdash; всего в&nbsp;ботанической коллекции больше&nbsp;6600
+                  растений.&nbsp;Территория&nbsp;клубных&nbsp;особняков в 160
+                  метрах от&nbsp;Красной площади начинается...</p>
+              </div>
+            </article>
           </li>
 
           <li class="news__item">
-            <picture class="news__image-box">
-              <source media="(max-width: 767px)"
-                srcset="images/news/img-5-list-mobile.jpg 1x, images/news/img-5-list-mobile@2x.jpg 2x">
+            <article class="news__card">
+              <picture class="news__image-box news__image-box--flex">
+                <source media="(max-width: 767px)"
+                  srcset="images/news/img-5-list-mobile.jpg 1x, images/news/img-5-list-mobile@2x.jpg 2x">
 
-              <source media="(max-width: 1023px)"
-                srcset="images/news/img-5-list-tablet.jpg 1x, images/news/img-5-list-tablet@2x.jpg 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="images/news/img-5-list-tablet.jpg 1x, images/news/img-5-list-tablet@2x.jpg 2x">
 
-              <img class="news__img" src="images/news/img-5-list.jpg" srcset="images/news/img-5-list@2x.jpg 2x"
-                width="340" height="220" alt="фасад здания">
-            </picture>
+                <img class="news__img" src="images/news/img-5-list.jpg" srcset="images/news/img-5-list@2x.jpg 2x"
+                  width="340" height="220" alt="фасад здания">
+              </picture>
 
-            <div class="news__text-inner">
+              <!-- карточки для гридов -->
+              <picture class="news__image-box news__image-box--grid">
+                <source media="(max-width: 767px)"
+                  srcset="images/news/img-5-grid-mobile.jpg 1x, images/news/img-5-grid-mobile@2x.jpg 2x">
 
-              <div class="news__center-inner">
-                <h3 class="news__title">Видео. Ювелирное воссоздание барельефов &laquo;Ильинки 3/8&raquo;</h3>
+                <source media="(max-width: 1023px)"
+                  srcset="images/news/img-5-grid-tablet.jpg 1x, images/news/img-5-grid-tablet@2x.jpg 2x">
 
-                <div class="news__date-inner">
-                  <span class="news__date">3&nbsp;апреля 2024</span>
+                <img class="news__img" src="images/news/img-5-grid.jpg" srcset="images/news/img-5-grid@2x.jpg 2x"
+                  width="340" height="220" alt="фасад здания">
+              </picture>
 
-                  <a class="news__link btn" href="#">Ильинка 3/8</a>
+              <div class="news__text-inner">
+
+                <div class="news__center-inner">
+                  <h3 class="news__title">Видео. Ювелирное воссоздание барельефов &laquo;Ильинки 3/8&raquo;</h3>
+
+                  <div class="news__date-inner">
+                    <span class="news__date">3&nbsp;апреля 2024</span>
+
+                    <a class="news__link btn" href="#">Ильинка 3/8</a>
+                  </div>
                 </div>
-              </div>
 
-              <p class="news__description">Грифон, пардус, лев и&nbsp;птица Сирин&nbsp;&mdash; существа
-                из&nbsp;славянской мифологии. Они
-                символизируют величие, изящество, благородство и&nbsp;радость.<br>
-                Барельефы с&nbsp;этими волшебными
-                созданиями
-                охраняют покой и&nbsp;благополучие жителей &laquo;Ильинки 3/8&raquo;, создавая неповторимый облик
-                клубных особняков в&nbsp;160
-                метрах от&nbsp;Красной площади. Об&nbsp;идее создания артефактов и&nbsp;её&nbsp;воплощении в&nbsp;камне
-                руками иранских мастеров
-                смотрите в&nbsp;новом видео ...</p>
-            </div>
+                <p class="news__description">Грифон, пардус, лев и&nbsp;птица Сирин&nbsp;&mdash; существа
+                  из&nbsp;славянской мифологии. Они
+                  символизируют величие, изящество, благородство и&nbsp;радость.<br>
+                  Барельефы с&nbsp;этими волшебными
+                  созданиями
+                  охраняют покой и&nbsp;благополучие жителей &laquo;Ильинки 3/8&raquo;, создавая неповторимый облик
+                  клубных особняков в&nbsp;160
+                  метрах от&nbsp;Красной площади. Об&nbsp;идее создания артефактов и&nbsp;её&nbsp;воплощении
+                  в&nbsp;камне
+                  руками иранских мастеров
+                  смотрите в&nbsp;новом видео ...</p>
+              </div>
+            </article>
           </li>
 
           <li class="news__item">
-            <picture class="news__image-box">
-              <source media="(max-width: 767px)"
-                srcset="images/news/img-6-list-mobile.jpg 1x, images/news/img-6-list-mobile@2x.jpg 2x">
+            <article class="news__card">
+              <picture class="news__image-box news__image-box--flex">
+                <source media="(max-width: 767px)"
+                  srcset="images/news/img-6-list-mobile.jpg 1x, images/news/img-6-list-mobile@2x.jpg 2x">
 
-              <source media="(max-width: 1023px)"
-                srcset="images/news/img-6-list-tablet.jpg 1x, images/news/img-6-list-tablet@2x.jpg 2x">
+                <source media="(max-width: 1023px)"
+                  srcset="images/news/img-6-list-tablet.jpg 1x, images/news/img-6-list-tablet@2x.jpg 2x">
 
-              <img class="news__img" src="images/news/img-6-list.jpg" srcset="images/news/img-6-list@2x.jpg 2x"
-                width="340" height="220" alt="фасад здания">
-            </picture>
+                <img class="news__img" src="images/news/img-6-list.jpg" srcset="images/news/img-6-list@2x.jpg 2x"
+                  width="340" height="220" alt="фасад здания">
+              </picture>
 
-            <div class="news__text-inner">
+              <!-- карточки для гридов -->
+              <picture class="news__image-box news__image-box--grid">
+                <source media="(max-width: 767px)"
+                  srcset="images/news/img-6-grid-mobile.jpg 1x, images/news/img-6-grid-mobile@2x.jpg 2x">
 
-              <div class="news__center-inner">
-                <h3 class="news__title">РБК. Пять зданий с&nbsp;эффектной архитектурой, которые скоро построят
-                  в&nbsp;Москве</h3>
+                <source media="(max-width: 1023px)"
+                  srcset="images/news/img-6-grid-tablet.jpg 1x, images/news/img-6-grid-tablet@2x.jpg 2x">
 
-                <div class="news__date-inner">
-                  <span class="news__date">3&nbsp;апреля 2024</span>
+                <img class="news__img" src="images/news/img-6-grid.jpg" srcset="images/news/img-6-grid@2x.jpg 2x"
+                  width="340" height="220" alt="фасад здания">
+              </picture>
+
+              <div class="news__text-inner">
+
+                <div class="news__center-inner">
+                  <h3 class="news__title">РБК. Пять зданий с&nbsp;эффектной архитектурой, которые скоро построят
+                    в&nbsp;Москве</h3>
+
+                  <div class="news__date-inner">
+                    <span class="news__date">3&nbsp;апреля 2024</span>
 
 
+                  </div>
+                </div>
+
+                <div class="news__description-inner">
+                  <p class="news__description">Редакция «РБК-Недвижимости» заглянула в будущее и выбрала пять новых
+                    архитектурных символов, которые скоро появятся в Москве.</p>
+                  <ul class="news__description-list">
+
+                    <li class="news__description-item">
+                      <p class="news__description">Технопарк со светопрозрачным фасадом в неофутуристичном стиле</p>
+                    </li>
+
+                    <li class="news__description-item">
+                      <p class="news__description">Бионические фасады с окнами, из которых открываются панорамы Кремля
+                      </p>
+                    </li>
+
+                    <li class="news__description-item">
+                      <p class="news__description">Музей в стиле необрутализма на территории монастыря</p>
+                    </li>
+
+                    <li class="news__description-item">
+                      <p class="news__description">Школа будущего как из произведений ...</p>
+                    </li>
+                  </ul>
                 </div>
               </div>
-
-              <div class="news__description-inner">
-                <p class="news__description">Редакция «РБК-Недвижимости» заглянула в будущее и выбрала пять новых
-                  архитектурных символов, которые скоро появятся в Москве.</p>
-                <ul class="news__description-list">
-
-                  <li class="news__description-item">
-                    <p class="news__description">Технопарк со светопрозрачным фасадом в неофутуристичном стиле</p>
-                  </li>
-
-                  <li class="news__description-item">
-                    <p class="news__description">Бионические фасады с окнами, из которых открываются панорамы Кремля</p>
-                  </li>
-
-                  <li class="news__description-item">
-                    <p class="news__description">Музей в стиле необрутализма на территории монастыря</p>
-                  </li>
-
-                  <li class="news__description-item">
-                    <p class="news__description">Школа будущего как из произведений ...</p>
-                  </li>
-                </ul>
-              </div>
+            </article>
           </li>
-
-
-
-
 
         </ul>
       </div>
