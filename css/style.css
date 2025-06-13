@@ -941,6 +941,7 @@ a {
   color: #1d252d;
 }
 .project-filters__view-box:hover, .project-filters__view-box:focus-visible {
+  color: #1d252d;
   text-decoration: underline;
   outline: none;
 }
@@ -979,6 +980,11 @@ a {
 .btn--active {
   background-color: #1d252d;
   color: #d6d2c4;
+}
+.btn:hover, .btn:focus-visible {
+  background-color: #c8c4b5;
+  color: #1d252d;
+  outline: none;
 }
 
 .news__list {
@@ -1179,6 +1185,10 @@ a {
             flex-direction: column;
     gap: 10px;
   }
+}
+.news__card:hover, .news__card:focus-visible {
+  background-color: #f2f3ee;
+  outline: none;
 }
 .news__image-box--grid {
   display: none;

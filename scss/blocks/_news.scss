@@ -170,6 +170,12 @@
             flex-direction: column;
             gap: 10px;
         }
+
+        &:hover,
+        &:focus-visible {
+            background-color: $color-twilight-blue;
+            outline: none;
+        }
     }
 
     &__image-box--grid {
