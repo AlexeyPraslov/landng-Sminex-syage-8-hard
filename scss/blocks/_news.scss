@@ -38,29 +38,53 @@
             .news__link {
                 position: absolute;
                 z-index: 2;
-                top: 0px;
+                top: -40px;
                 left: 0px;
+
+                padding: 8px 16px;
+                color: $color-blue-charcoa;
+                background-color: $color-ecru-white;
+                border-radius: 60px;
+
+                font-size: 14px;
+                line-height: 20px;
+
+                width: fit-content;
+
+                @include vp-1023 {
+                    top: -60px;
+                }
+
+                @include vp-767 {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+            }
+
+            .news__item {
+                position: relative;
             }
 
             .news__card {
-                position: relative; // для позиционирования потомков
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 min-height: 360px;
                 height: 100%;
 
-                padding: 40px;
+                padding: 80px 40px 40px 40px;
                 width: 100%;
                 justify-content: space-between;
                 gap: 20px;
 
                 @include vp-1023 {
-                    padding: 20px;
+                    padding: 80px 20px 20px 20px;
                 }
 
                 @include vp-767 {
                     min-height: 200px;
                     height: 100%;
+                    padding-top: 80px;
                 }
             }
 
@@ -98,6 +122,18 @@
                     z-index: 1;
                     pointer-events: none;
                 }
+            }
+
+            .news__card-link:hover .news__image-box--grid::before {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            .news__card-link:focus-visible .news__image-box--grid::before {
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            .news__card-link:focus-visible {
+                outline: none;
             }
 
             .news__text-inner {
@@ -142,6 +178,7 @@
             .news__date-inner {
                 margin: 0;
                 align-items: flex-end;
+                flex-direction: row;
             }
         }
     }
@@ -170,7 +207,10 @@
             flex-direction: column;
             gap: 10px;
         }
+    }
 
+    &__card-link {
+        display: flex;
         &:hover,
         &:focus-visible {
             background-color: $color-twilight-blue;
@@ -237,6 +277,23 @@
         }
     }
 
+    &__link {
+        padding: 8px 16px;
+        color: $color-blue-charcoa;
+        background-color: $color-ecru-white;
+        border-radius: 60px;
+
+        font-size: 14px;
+        line-height: 20px;
+
+        width: fit-content;
+
+        @include vp-767 {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+
     &__description {
         font-weight: 300;
         font-size: 18px;
@@ -250,6 +307,8 @@
         @include vp-1023 {
             max-width: 100%;
             text-align: justify;
+            font-size: 16px;
+            line-height: 20px;
         }
 
         @include vp-767 {
@@ -284,6 +343,10 @@
         height: 4px;
         border-radius: 50%;
         background-color: $color-blue-charcoa;
+
+        @include vp-1023 {
+            top: 9px;
+        }
 
         @include vp-767 {
             top: 6px;
