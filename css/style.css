@@ -1030,8 +1030,8 @@ a {
 .news__list--grid .news__link {
   position: absolute;
   z-index: 2;
-  top: -40px;
-  left: 0px;
+  top: 40px;
+  left: 40px;
   padding: 8px 16px;
   color: #1d252d;
   background-color: #d6d2c4;
@@ -1044,7 +1044,8 @@ a {
 }
 @media (max-width: 1023px) {
   .news__list--grid .news__link {
-    top: -60px;
+    top: 20px;
+    left: 20px;
   }
 }
 @media (max-width: 767px) {
@@ -1067,11 +1068,14 @@ a {
           flex-direction: column;
   min-height: 360px;
   height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 80px 40px 40px 40px;
   width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   gap: 20px;
 }
 @media (max-width: 1023px) {
@@ -1094,6 +1098,9 @@ a {
   height: 100%;
   z-index: 0;
   pointer-events: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .news__list--grid .news__image-box--grid .news__img {
   width: 100%;
@@ -1128,7 +1135,6 @@ a {
   outline: none;
 }
 .news__list--grid .news__text-inner {
-  position: relative;
   z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1137,12 +1143,15 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   height: 100%;
   padding: 0;
   margin: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 .news__list--grid .news__center-inner {
   display: -webkit-box;
@@ -1154,6 +1163,7 @@ a {
           flex-direction: column-reverse;
   margin-top: auto;
   min-width: 100%;
+  height: 100%;
 }
 @media (max-width: 767px) {
   .news__list--grid .news__center-inner {
@@ -1178,6 +1188,7 @@ a {
 }
 .news__list--grid .news__date-inner {
   margin: 0;
+  margin-top: auto;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -1185,6 +1196,12 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+.news__list--grid .news__item .news__description {
+  display: none;
+}
+.news__list--grid .news__card-link {
+  height: 100%;
 }
 .news__card {
   display: -webkit-box;
